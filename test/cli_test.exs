@@ -8,8 +8,8 @@ defmodule CliTest do
     assert parse_args(["-h", "anything"]) == :help
   end
 
-  test "should return params as tuple when passed 3 args" do
-    assert parse_args(["user", "project", 5]) == {"user", "project", 5}
+  test "should return 3 params as tuple when passed 3 args" do
+    assert parse_args(["user", "project", "5"]) == {"user", "project", 5}
   end
 
   test "should return default count when passed 2 params" do
